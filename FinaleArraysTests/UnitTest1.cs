@@ -312,26 +312,7 @@ namespace FinaleArraysTests
                     { -1},
                     { 4}
                     };
-                    break;
-                case 2:
-                   arr1 = new int[,]
-                   {
 
-                   };
-                   break;
-                case 3:
-                   arr1 = new int[,]
-                   {
-                   { -1, -10, -9 },
-                   { -1,-50, -2 },
-                   { 4, 44, 0 }
-                   };
-                   break;
-            }
-
-            switch (a)
-            {
-               case 1:
                     expected = new int[,]
                     {
                     { 1},
@@ -339,20 +320,32 @@ namespace FinaleArraysTests
                     { 4}
                     };
                     break;
-               case 2:
+                case 2:
+                    arr1 = new int[,]
+                    {
+
+                    };
+
                     expected = new int[,]
-                   {
-                   { 0 }
-                   };
-                   break;
-               case 3:
+                    {
+                    { 0 }
+                    };
+                    break;
+                case 3:
+                    arr1 = new int[,]
+                    {
+                    { -1, -10, -9 },
+                    { -1,-50, -2 },
+                    { 4, 44, 0 }
+                    };
+
                     expected = new int[,]
-                   {
-                   { -1, -1, 4 },
-                   { -10,-50, 44 },
-                   { -9, -2, 0 }
-                   };
-                   break;
+                    {
+                    { -1, -1, 4 },
+                    { -10,-50, 44 },
+                    { -9, -2, 0 }
+                    };
+                    break;
             }
 
             int[,] actual = MyArrays.FlipEl(arr1);
